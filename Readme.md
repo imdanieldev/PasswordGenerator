@@ -24,7 +24,8 @@ Perfect for developers, security enthusiasts, or anyone needing quick, customiza
 Install dependencies via pip:
 ```bash
 pip install pyperclip colorama
-
+```
 ## Usage
 ```bash
 python main.py
+```
