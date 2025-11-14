@@ -1,31 +1,46 @@
-# Password Generator Tool
+# 🔐 Password Manager (Python + SQLite + Encryption)
 
-A simple yet powerful command-line password generator written in Python. This interactive script helps you create strong, random passwords, view saved ones, copy them to the clipboard, and securely store them in a local file with associated platform names. It combines lowercase, uppercase letters, digits, and punctuation for maximum entropy and security.
+A secure command-line password manager built with Python.  
+It generates strong random passwords, encrypts them with a master password, and stores them safely in SQLite.
 
-Perfect for developers, security enthusiasts, or anyone needing quick, customizable passwords without relying on online tools.
+---
 
-## Features
-- **Random Password Generation**: Generate passwords of any length using a full character set (letters, numbers, symbols).
-- **Read Saved Passwords**: Load and display all previously saved passwords from a `./PASSWORDS` file in a highlighted format.
-- **Clipboard Integration**: Automatically copy the generated password to your system's clipboard using `pyperclip`.
-- **Persistent Storage**: Save passwords to a plaintext file (`./PASSWORDS`) with optional platform labels (e.g., "GitHub", "Email").
-- **Colorful CLI Feedback**: Leverages `colorama` for intuitive output—green for passwords, red for errors, and styled reading mode.
-- **Input Validation**: Handles invalid inputs gracefully (e.g., non-numeric length) with clear error messages.
-- **Interactive Prompts**: Step-by-step user guidance with yes/no options and customizable inputs.
-- **Cross-Platform**: Works on Windows, macOS, and Linux (as long as Python and dependencies are installed).
+## ✨ Features
+- **Strong password generation** with customizable character sets
+- **Secure storage** using `cryptography.Fernet` with PBKDF2HMAC key derivation
+- **SQLite database** for lightweight and reliable storage
+- **Master Password protection** (all entries encrypted with your key)
+- **Clipboard integration** via `pyperclip`
+- **Interactive CLI menu** with colorized output (`colorama`)
+- **Search, list, copy, and delete entries**
+- **Change Master Password** and re-encrypt all data
 
-## Requirements
-- **Python Version**: 3.6 or higher (tested on 3.12+)
-- **Dependencies**:
-  - `pyperclip` – For clipboard functionality.
-  - `colorama` – For colored terminal output.
-  - Built-in modules: `string`, `random` (no installation needed).
+---
 
-Install dependencies via pip:
+## 📦 Installation
+
+### Clone or download the project
 ```bash
-pip install pyperclip colorama
-```
-## Usage
-```bash
+git clone https://github.com/imdanieldev/PasswordGenerator.git
+cd password-manager
+pip install cryptography colorama pyperclip
 python main.py
 ```
+## 🖥️ Usage
+**Enter your Master Password (used to derive the encryption key).**
+
+### Choose an option from the menu:
+
+- **Create a new entry**
+
+- **List all entries**
+
+- **Search by platform**
+
+- **Copy password by ID**
+
+- **Delete entry by ID**
+
+- **Change Master Password**
+
+- **Exit**
