@@ -23,7 +23,7 @@ It generates strong random passwords, encrypts them with a master password, and 
 ```bash
 git clone https://github.com/imdanieldev/PasswordGenerator.git
 cd password-manager
-pip install cryptography colorama pyperclip
+pip install cryptography colorama pyperclip customtkinter
 python main.py
 ```
 ## 🖥️ Usage
